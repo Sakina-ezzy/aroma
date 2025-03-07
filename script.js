@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("loginForm").addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent actual form submission
 
@@ -63,10 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // If validation passes, redirect to index.html
-        window.location.href = "index.html";
+        // If validation passes, redirect to aroma.html
+        window.location.href = "aroma.html";
     });
-// });
 
 
 
