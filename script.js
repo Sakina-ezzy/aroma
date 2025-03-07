@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Retrieve cart count from localStorage or set to 0
     // let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
-    let cartCount =  0;
+    let cartCount = 0;
     cartCounter.textContent = cartCount;
 
     addToCart.addEventListener("click", function () {
@@ -36,4 +36,37 @@ document.addEventListener("DOMContentLoaded", function () {
         cartCounter.textContent = cartCount; // Update UI
     });
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent actual form submission
+
+        // Get input values
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value.trim();
+
+        // Email validation regex
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        // Password validation regex (at least 6 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character)
+        let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+
+        // Validate email
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        // Validate password
+        if (!passwordPattern.test(password)) {
+            alert("Password must be at least 6 characters long and include one uppercase letter, one lowercase letter, one number, and one special character.");
+            return;
+        }
+
+        // If validation passes, redirect to index.html
+        window.location.href = "index.html";
+    });
+// });
+
+
 
