@@ -20,23 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    const addToCart = document.getElementById("cart-btn");
-    const cartCounter = document.getElementById("cart-count");
-
-    // Retrieve cart count from localStorage or set to 0
-    // let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
-    let cartCount = 0;
-    cartCounter.textContent = cartCount;
-
-    addToCart.addEventListener("click", function () {
-        cartCount++; // Increment cart count
-        // localStorage.setItem("cartCount", cartCount);
-        cartCounter.textContent = cartCount; // Update UI
-    });
-});
-
     document.getElementById("loginForm").addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent actual form submission
 
